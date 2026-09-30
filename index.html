@@ -471,7 +471,7 @@
     // Cargar datos en vivo al abrir la página
     async function loadDataFromSheets() {
       try {
-          if (!GOOGLE_SHEETS_CSV_URL || GOOGLE_SHEETS_CSV_URL === "https://docs.google.com/spreadsheets/d/e/2PACX-1vRLl0RX7W9g93dlVmS7iujh-gfwqUvEY0mI0SvjYqGDGP7pjC2w7aHDDcwddOwp2iifluWmjfEBGWUU/pub?output=csv") {
+          if (!GOOGLE_SHEETS_CSV_URL || GOOGLE_SHEETS_CSV_URL.trim() === "" || GOOGLE_SHEETS_CSV_URL.includes("PEGA_AQUI")) {
           document.getElementById("loading").innerHTML = `
             <div style="background:white; padding:28px; border-radius:12px; border:1px solid #cbd5e1; max-width:550px; text-align:center;">
               <h3 style="color:#1e3a8a; margin-bottom:8px;">Falta vincular tu Google Sheets</h3>
