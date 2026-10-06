@@ -40,24 +40,68 @@
       margin: 0 auto 24px;
       background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
       color: white;
-      padding: 22px 32px;
+      padding: 18px 28px;
       border-radius: 16px;
       box-shadow: var(--shadow-md);
-      display: grid;
-      grid-template-columns: auto 1fr auto;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 24px;
+      gap: 20px;
     }
 
-    @media (max-width: 960px) {
+    .header-logo-card {
+      flex: 0 0 auto;
+      background: #ffffff;
+      padding: 6px 14px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .header-logo-card img {
+      height: 52px;
+      width: auto;
+      max-width: 190px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .header-title {
+      flex: 1 1 auto;
+      text-align: center;
+      padding: 0 16px;
+    }
+
+    .header-title h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    .header-title p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .status-badge {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
       .header-container {
-        grid-template-columns: 1fr;
-        justify-items: center;
+        flex-direction: column;
         text-align: center;
-        gap: 16px;
       }
     }
-
     .header-logo-card {
       background: #ffffff;
       padding: 6px 14px;
